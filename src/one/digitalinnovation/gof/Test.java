@@ -8,6 +8,9 @@ import one.digitalinnovation.gof.strategy.Comportamento;
 import one.digitalinnovation.gof.strategy.ComportamentoAgressivo;
 import one.digitalinnovation.gof.strategy.ComportamentoDefensivo;
 import one.digitalinnovation.gof.strategy.ComportamentoNormal;
+import one.digitalinnovation.gof.strategy.Conta;
+import one.digitalinnovation.gof.strategy.ContaCorrente;
+import one.digitalinnovation.gof.strategy.ContaPoupanca;
 import one.digitalinnovation.gof.strategy.Robo;
 
 public class Test {
@@ -52,6 +55,13 @@ public class Test {
 		
 		Facade facade = new Facade();
 		facade.migrarCliente("Venilton", "14801788");
+		
+		//Strategy 2
+		Conta contaCorrente = new ContaCorrente();
+		contaCorrente.saldo();
+		
+		Conta contaPoupanca = new ContaPoupanca();
+		contaPoupanca.saldo();
 	}
 
 }
